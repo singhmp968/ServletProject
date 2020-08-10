@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script>
+function clickMe(){
+	
+	var itemid =  document.card.itemid.value;
+	var itemname =  document.card.itemname.value;
+	var yourname =  document.card.yourname.value;
+	var email = document.card.email.value;
+	var accountbid = document.card.accountbid.value;
+	var pa1=false;
+if(itemid.length==0){
+	console.log("error")
+	var ele="req";
+	var itemId=document.querySelector('#itempara').value;	
+	document.querySelector('#itempara').textContent=ele;
+	document.querySelector('#itempara').style.color="red";
+
+
+	//document.querySelector('#itempara').textContent=ele + itemId
+	
+	pa1 =false;
+}else{
+	pa1=true
+}
+pa2=false
+if(itemname.length==0){
+	console.log("error2")
+	var ele="req";
+	var itemId=document.querySelector('#iname').value;	
+	document.querySelector('#iname').textContent=ele;
+	document.querySelector('#iname').style.color="red";
+	pa2 =false;
+}else{
+	pa2=true
+}
+
+pa3=false
+if(yourname.length==0){
+	console.log("error2")
+	var ele="req";
+	var itemId=document.querySelector('#yname').value;	
+	document.querySelector('#yname').textContent=ele;
+	document.querySelector('#yname').style.color="red";
+	pa3 =false;
+}else{
+	pa3=true
+}
+
+pa4=false
+if(email.length==0){
+	console.log("error2")
+	var ele="req";
+	var itemId=document.querySelector('#ema').value;	
+	document.querySelector('#ema').textContent=ele;
+	document.querySelector('#ema').style.color="red";
+	pa4 =false;
+}else{
+	pa4=true
+}
+
+
+pa5=false
+if(accountbid.length==0){
+	console.log("error2")
+	var ele="req";
+	var itemId=document.querySelector('#abc').value;	
+	document.querySelector('#abc').textContent=ele;
+	document.querySelector('#abc').style.color="red";
+	pa5 =false;
+}else{
+	pa5=true
+}
+
+
+
+if(pa1 && pa2 && pa3 &&pa4 &&pa5){
+return true;
+}
+else{
+	return false;
+}
+
+
+
+
+}
+
+
+
+</script>
+
+</head>
+<body>
+
+
+<div class="container">
+<div class="row">
+
+
+<div class="col-md-6 offset-md-3">
+<form onsubmit="return clickMe()" name = "card" action="./Webpage/op.jsp">
+
+<div class="card-header bg-dark text-white">
+<h3>Welcome to Ap Auction. Plaese enter Bid </h3>
+</div>
+
+<div class="card-body bg-secondary">
+<div class="form-group">
+<p id="itempara">ItemID:</p><input name = "itemid" type="number" id="itemid"class="form-control">
+</div>
+<div class="form-group">
+<p id="iname">ItemName:</p><input name="itemname" type="text" class="form-control">
+</div>
+<div class="form-group">
+<p id="yname">YourName:</p><input name="yourname" type="text" class="form-control">
+</div>
+<div class="form-group">
+<p id="ema">Your Email Address:</p><input name="email" type="email" class="form-control">
+</div>
+<div class="form-group">
+<p id="abc">Account Bid:</p><input name="accountbid" type="number" class="form-control">
+</div>
+<div class="form-group">
+AutoIncrement Bidder:<input name="bidder" type="checkbox" class="form-control" placeholder="Enter number n2">
+</div>
+
+</div>
+<div class="card-footer text-center bg-dark text-white">
+<button type="submit" value="submit" class="btn btn-outline-light">Submit</button>
+</div>
+</div>
+</form>
+</div>
+
+</div>
+
+
+</body>
+</html>
